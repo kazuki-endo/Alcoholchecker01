@@ -37,8 +37,8 @@ public String check(Model model) {
 	return "check";
 }
 
-////フォームに入力された値を受け取り計算してresultに返す(DB未使用)/////
-////純アルコール量を計算//////
+////フォームに入力された値を受け取り計算してresultに返す/////
+
  @RequestMapping("result")
  public String result(Model model, ModelMap modelmap, @RequestParam("a") int a, @RequestParam("b") int b, @RequestParam("c") int c,
 		 @RequestParam("d") int d, @RequestParam("e") int e, @RequestParam("f") int f, @RequestParam("g") int g,
@@ -98,8 +98,7 @@ public String check(Model model) {
 	
 	////アルコール分解までの時間
 	double times = gouAl / (weight * 0.1);
-	modelmap.addAttribute("times",String.format("%.1f", times));
-	
+	modelmap.addAttribute("times",String.format("%.0f", times));
 	return "result";
  }
 
