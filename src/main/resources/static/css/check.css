@@ -1,0 +1,38 @@
+body{
+  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
+    font-family: Meiryo UI;
+    text-align: center;
+}
+
+
+h1 {
+	text-align:center;
+	font-size:45px;
+	color: #000000;
+	font-family:"Meiryo UI";
+
+}
+
+p{
+	font-size: 25px;
+	line-height: 1.5;
+}
+
+
+
+
+
+.endo {
+	font-family: Meiryo UI;
+	font-weight: bold;
+	text-align:center;
+	font-size:27px;
+	color: #ffff00;
+	display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #ffffff;/*ボタン色*/
+    color: #000000;
+    border-bottom: solid 2px #c0c0c0;/*ボタン底影*/
+    border-right: solid 3px #c0c0c0;/*ボタン右影*/
+    border-radius: 3px;}

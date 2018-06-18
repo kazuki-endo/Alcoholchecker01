@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>どれだけ飲みましたか？</title>
+  <meta http-equiv="content-type" charset="utf-8">
+  
+      <!-- CSS -->
+  <link rel="stylesheet" href="/css/check.css" th:href="@{/css/check.css}">
+</head>
+<body>
+  <div><h1>アルコールチェック</h1></div>
+ 
+ <form method="get" action="result"> 
+ 	
+ <p>体重
+  		<br><input value="0" type="number" min="0" max="200" name="weight" style="width:200px;height:30px;font-size:30px;"/><span>kg</span>
+  	<p>生ビール　✤　450ml　✤　5%
+  
+		<br><input value="0" type="number" min="0" max="100" name="a" style="width:200px;height:30px;font-size:30px;" />杯<br />
+		
+  	<p>生ビール大　✤　750ml　✤　5%
+		<br><input value="0" type="number" min="0" max="100" name="b" style="width:200px;height:30px;font-size:30px;" />杯<br />
+		
+  	<p>ハイボール　✤　450ml　✤　7%
+  		<br><input value="0" type="number" min="0" max="100" name="c" style="width:200px;height:30px;font-size:30px;" />杯<br />
+	
+  	<p>ワイン　✤　125ml　✤　10%
+		<br><input value="0" type="number" min="0" max="100" name="d" style="width:200px;height:30px;font-size:30px;" />杯<br />
+
+  	<p>日本酒　✤　180ml　✤　15%
+		<br><input value="0" type="number" min="0" max="100" name="e" style="width:200px;height:30px;font-size:30px;" />杯<br />
+		
+  	<p>焼酎　✤　100ml　✤　25%
+  		<br><input value="0" type="number" min="0" max="100" name="f" style="width:200px;height:30px;font-size:30px;" />杯<br />
+		
+		
+  	<p>メニューにない場合はこちら！
+  		<br><input value="0" style="width:200px;height:30px;font-size:30px;" type="text" min="0" max="9999" name="fr">ml<input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu" />％<input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="g" />杯
+  		<br><a><input class="endo" type="submit" value="完了"/></a>
+</form>
+
+
+
+</body>
+</html> 
