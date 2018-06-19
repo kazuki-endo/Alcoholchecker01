@@ -29,9 +29,57 @@
    <span th:text="${gouAl}"></span>g<br><br>
   <p>アルコール分解まで</p>
    <span th:text="${times}"></span>時間<br>
-   　<br>残り<span th:text="${times}"></span>時間は運転を控えてください！<br>
-   
-</div>
+ <div id="CDT"></div>
+
+
+
+
+<script th:inline="javascript" type="text/javascript">
+/*<![CDATA[*/
+function CountdownTimer(elm,tl,mes){
+ this.initialize.apply(this,arguments);
+}
+CountdownTimer.prototype={
+ initialize:function(elm,tl,mes) {
+  this.elem = document.getElementById(elm);
+  this.tl = tl;
+  this.mes = mes;
+ },countDown:function(){
+  var timer='';
+  var today=new Date();
+  var day=Math.floor((this.tl-today)/(24*60*60*1000));
+  var hour=Math.floor(((this.tl-today)%(24*60*60*1000))/(60*60*1000));
+  var min=Math.floor(((this.tl-today)%(24*60*60*1000))/(60*1000))%60;
+  var sec=Math.floor(((this.tl-today)%(24*60*60*1000))/1000)%60%60;
+  var milli=Math.floor(((this.tl-today)%(24*60*60*1000))/10)%100;
+  var me=this;
+
+  if( ( this.tl - today ) > 0 ){
+   if (day) timer += '<span class="day">'+day+'日</span>';
+   if (hour) timer += '<span class="hour">'+hour+'時間</span>';
+   timer += '<span class="min">'+this.addZero(min)+'分</span><span class="sec">'+this.addZero(sec)+'秒</span><span class="milli">'+this.addZero(milli)+'</span>';
+   this.elem.innerHTML = timer;
+   tid = setTimeout( function(){me.countDown();},10 );
+  }else{
+   this.elem.innerHTML = this.mes;
+   return;
+  }
+ },addZero:function(num){ return ('0'+num).slice(-2); }
+}
+function CDT(){
+ // var tl = new Date('2018/6/28 00:00:00');
+ var tl = new Date(/*[[${time}]]*/ '2018/6/28 00:00:00');
+ console.log(/*[[${time}]]*/);
+ var timer = new CountdownTimer('CDT',tl,'安全運転でお願いします！');
+ timer.countDown();
+}
+window.onload=function(){
+ CDT();
+}
+/*]]>*/
+</script>
+ 
+
    
    
  

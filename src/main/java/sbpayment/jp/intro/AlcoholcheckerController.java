@@ -1,5 +1,6 @@
 package sbpayment.jp.intro;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -94,11 +95,12 @@ public String check(Model model) {
 	
 	/////純アルコール量の合計
 	double gouAl = Al + Al1 + Al2 + Al3 + Al4 + Al5 + Al6;
-	modelmap.addAttribute("gouAl",gouAl);
+	modelmap.addAttribute("gouAl",String.format("%.1f",gouAl));
 	
 	////アルコール分解までの時間
 	double times = gouAl / (weight * 0.1);
 	modelmap.addAttribute("times",String.format("%.0f", times));
+	modelmap.addAttribute("time", LocalDateTime.now().plusHours((int) Math.round(times)));
 	return "result";
  }
 
@@ -111,14 +113,16 @@ public String result() {
 }
 
 //@PostMapping("/post")
-//public String Post(String name, int age,RedirectAttributes attr){
-   // attr.addFlashAttribute("number", number);
+//public String Post(int amount, int alcohol, RedirectAttributes attr){
+   // attr.addFlashAttribute("amount", amount);
+    * attr.addFlashAttribute("alcohol", alcohol);
+    */
     
     
-    /*jdbc.update("insert into person (age,name) values(?,?);", age,name);
-    attr.addFlashAttribute("people",jdbc.queryForList("SELECT * FROM person"));
-    //Map<String, Object> person = jdbc.queryForList("SELECT * FROM person where name = ?", name).get(0);
-    return "redirect:/sample";*/
+    /*jdbc.update("insert into DBAlc(amount,alcohol) values(?,?);", amount,alcohol);
+    attr.addFlashAttribute("drink",jdbc.queryForList("SELECT * FROM DBAlc"));
+    //Map<String, Object> DBAlc = jdbc.queryForList("SELECT * FROM DBAlc where amount = ?", amount).get(0);
+    return "redirect:/check";*/
 }
 
 
