@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="/css/result.css" th:href="@{/css/result.css}">
 </head>
 <body>
-  <h1>あなたの状態です</h1>
-  
-<div>  
-  <p>飲んだ量</p>
+  <h1 class="basic">Result</h1>
+<table>
+
+  <tr><th><p>　飲んだ量　</p></th><th><p>　純アルコール量　</p></th></tr>
+  <tr><td>　<span th:text="${gou}"></span>ml　</td><td><span th:text="${gouAl}"></span>g</td></tr>
    <!--<span hidden th:text="${sum}">sum</span>
    <span hidden th:text="${sum1}">sum1</span>
    <span hidden th:text="${sum2}">sum2</span>
    <span hidden th:text="${sum3}">sum3</span>
    <span hidden th:text="${sum4}">sum4</span>
    <span hidden th:text="${sum5}">sum5</span>-->
-   <span class="endo1" th:text="${gou}"></span>ml<br><br>
+   <!-- <span class="endo1" th:text="${gou}"></span>ml<br><br>
    <p>純アルコール量</p>
    <span hidden th:text="${Al}"></span>
    <span hidden th:text="${Al1}"></span>
@@ -26,9 +27,10 @@
    <span hidden th:text="${Al3}"></span>
    <span hidden th:text="${Al4}"></span>
    <span hidden th:text="${Al5}"></span>
-   <span th:text="${gouAl}"></span>g<br><br>
+   <span th:text="${gouAl}"></span>g<br><br>-->
+   </table>
   <p>アルコール分解まで</p>
-   <span th:text="${times}"></span>時間<br>
+   <div>約<span th:text="${times}"></span>時間<br></div>
  <div id="CDT"></div>
 
 
@@ -78,11 +80,16 @@ window.onload=function(){
 }
 /*]]>*/
 </script>
- 
+<div class="frame frame-red">
+  <div class="frame-title caution">
+    CAUTION
+  </div>
+  <h2>
+    算出時間は個人差が大きく、あくまで簡易的な目安です。
+  </h2>
+</div>
 
-   
-   
- 
+	<br></br>
   <a href = "./index" >ＴＯＰに戻る</a><br>
 </body>
 </html>

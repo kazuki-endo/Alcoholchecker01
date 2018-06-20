@@ -12,16 +12,17 @@
  
  
 
-  <div><h1>アルコールチェック</h1></div>
+  <div><h1>Menu</h1></div>
+  
  <form method="get" action="result"> 
  <p>体重
-  		<br><input value="0" type="number" min="0" max="200" name="weight" style="width:200px;height:30px;font-size:30px;"/><span>kg</span>
+  		<br><input value="0" type="number" min="0" max="150" name="weight" style="width:200px;height:30px;font-size:30px;"/><span>kg</span>
  
  <table>
   <tr><th>お酒</th><th>容量</th><th>度数</th><th>ドリンク数</th></tr>
-  <tr><td>生ビール</td><td>450ml</td><td>5%</td><td><input value="0" type="number" min="0" max="100" name="a" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
-  <tr><td>生ビール大</td><td>750ml</td><td>5%</td><td><input value="0" type="number" min="0" max="100" name="b" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
-  <tr><td>ハイボール</td><td>450</td><td>7%</td><td><input value="0" type="number" min="0" max="100" name="c" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
+  <tr><td>生ビール・チューハイなど</td><td>450ml</td><td>5%</td><td><input value="0" type="number" min="0" max="100" name="a" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
+  <tr><td>生ビール大・チューハイなど</td><td>750ml</td><td>5%</td><td><input value="0" type="number" min="0" max="100" name="b" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
+  <tr><td>ハイボール</td><td>450ml</td><td>7%</td><td><input value="0" type="number" min="0" max="100" name="c" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
   <tr><td>ワイン</td><td>125ml</td><td>10%</td><td><input value="0" type="number" min="0" max="100" name="d" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
   <tr><td>日本酒</td><td>180ml</td><td>15%</td><td><input value="0" type="number" min="0" max="100" name="e" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
   <tr><td>焼酎</td><td>100ml</td><td>25%</td><td><input value="0" type="number" min="0" max="100" name="f" style="width:200px;height:30px;font-size:30px;" />杯</td></tr>
@@ -29,8 +30,12 @@
  
 		
   	<p>メニューにない場合はこちら！
-  		<br><input value="0" style="width:200px;height:30px;font-size:30px;" type="text" min="0" max="9999" name="fr">ml<input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu" />％<input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="g" />杯
-  		<br><a><input class="endo" type="submit" value="完了"/></a>
+  	<table>
+  	<tr><th>容量</th><th>度数</th><th>ドリンク数</th></tr>
+  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="text" min="0" max="9999" name="fr">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="g" />杯</td></tr>
+  	</table>
+  		
+  		<br><input class="endo" type="submit" value="完了">
 </form>
 
 
