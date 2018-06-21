@@ -19,8 +19,9 @@ body {
 
 .basic {
   font-size:40px;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-  
+  /*text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  color:#ff0080;
 }
 .basic:first-letter{
 	font-size:60px;
@@ -134,7 +135,7 @@ h2{
 	font-size:30px;
 	color:#ff0000;
 }
-.frame {
+/*.frame {
  width: 60%;
  margin: 30px auto 20px;
  padding: 0px 20px 0;
@@ -161,3 +162,49 @@ h2{
 }
 .frame-red {
  border-color: #ff4500
+}*/
+
+.textboard {
+  width: 55%;
+  height: 140px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: #FFF;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 0 4px #FFF inset;
+  background-color: rgba(0,0,0,0.9);
+  text-align:left;
+  font-family: 'Meiryo UI';
+}
+.test1 {
+  width: 96%;
+  margin: 2%;
+  white-space: pre;
+  overflow: hidden;
+  -webkit-animation: ozDq 6s steps(70, end) ;
+  font-family: 'Meiryo UI';
+  font-size:25px;
+  font-weight:400;
+  /* プロパティは順に name, duration, timing-function です */
+  }
+.test1:after {
+  
+  -webkit-animation: ozPulse 1s infinite ease;
+  /* プロパティは順に name, duration, iteration-count, timing-function です */
+}
+@-webkit-keyframes ozDq { from { width: 0; } } /* 開始地点の指定 */
+@-moz-keyframes ozDq { from { width: 0 } }
+@-webkit-keyframes ozPulse { { /* 透明度の指定 */
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@-moz-keyframes ozPulse {
+from { opacity: 1; }
+to { opacity: 0; }
+}
+
+h3{
+	font-family: 'Meiryo UI';
+	text-align:left;
+}

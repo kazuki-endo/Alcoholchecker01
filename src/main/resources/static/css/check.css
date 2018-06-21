@@ -1,10 +1,12 @@
 body{
-  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
+  	background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
     font-family: Meiryo UI;
     text-align: center;
     padding: 0px 0px 35px 0px;
     animation: fadeIn 2s ease 0s 1 normal;
     -webkit-animation: fadeIn 2s ease 0s 1 normal;
+
+    
 }
 
 @keyframes fadeIn {
@@ -21,10 +23,11 @@ body{
 h1 {
 	text-align:center;
 	font-size:60px;
-	color: #000000;
+	color: #ff0080;
 	font-family: 'Cambria Math',sans-serif;
-	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-
+	/*text-shadow: 2px 4px 3px rgba(0,0,0,0.3);*/
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+	
 }
 
 p{
@@ -51,7 +54,10 @@ div{font-family: Meiryo UI;}
     color: #000000;
     border-bottom: solid 2px #c0c0c0;/*ボタン底影*/
     border-right: solid 3px #c0c0c0;/*ボタン右影*/
-    border-radius: 3px;}
+    border-radius: 3px;
+    text-align: center;
+    line-height:50px;
+    }
     
 .endo{
 	display: block;
@@ -66,12 +72,23 @@ div{font-family: Meiryo UI;}
 	overflow: hidden;
 	transition: .6s;
 	align: center;
+	margin-right: auto;
+	margin-left : auto;
+	color: #000000;
+  	letter-spacing: 0;
+ 	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135; 
+ 	text-align: center;
+ 	line-height: 50px;
+ 	box-shadow: 2px 2px 4px;
 }
 .endo:hover {
 	transform: rotateY(360deg);
+	background-color:#ff8040;
+	color:white;
 	}
 	    
 	table{
+	  width:980px;
 	  border-collapse: collapse;
 	  border-spacing: 5px 0;
 	  margin: 0 auto;
@@ -93,3 +110,6 @@ div{font-family: Meiryo UI;}
 	  border: dashed 2px #ff8000;
 }
 
+h2{font-size:18px;
+	
+}

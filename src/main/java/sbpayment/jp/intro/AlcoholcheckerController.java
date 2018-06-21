@@ -40,7 +40,8 @@ public String check(Model model) {
  @RequestMapping("result")
  public String result(Model model, ModelMap modelmap, @RequestParam("a") int a, @RequestParam("b") int b, @RequestParam("c") int c,
 		 @RequestParam("d") int d, @RequestParam("e") int e, @RequestParam("f") int f, @RequestParam("g") int g,
-		 @RequestParam("fr") int fr, @RequestParam("dosuu") double dosuu, @RequestParam("weight") int weight) {
+		 @RequestParam("fr") int fr, @RequestParam("dosuu") double dosuu, @RequestParam("weight") int weight, @RequestParam("h") int h,
+		 @RequestParam("fr1") int fr1, @RequestParam("dosuu1") int dosuu1) {
 	 
 	 //データベースから値を取得して計算
 	int sum = a * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(0).get("amount");
@@ -50,7 +51,8 @@ public String check(Model model) {
 	int sum4 = e * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(4).get("amount");
 	int sum5 = f * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(5).get("amount"); 
 	int sum6 = g * fr;
-	int gou = sum + sum1 + sum2 + sum3 + sum4 + sum5 + sum6;
+	int sum7 = h * fr1;
+	int gou = sum + sum1 + sum2 + sum3 + sum4 + sum5 + sum6 + sum7;
 	
 	double Al = (sum * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(0).get("alcohol") * 0.01) * 0.8;
 	double Al1 = (sum1 * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(1).get("alcohol") * 0.01) * 0.8;
@@ -59,6 +61,7 @@ public String check(Model model) {
 	double Al4 = (sum4 * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(4).get("alcohol") * 0.01) * 0.8;
 	double Al5 = (sum5 * (int)jdbc.queryForList("SELECT * FROM DBAlc").get(5).get("alcohol") * 0.01) * 0.8;
 	double Al6 = (sum6 * dosuu * 0.01) * 0.8;
+	double Al7 = (sum7 * dosuu1 * 0.01) * 0.8;
 	
 	modelmap.addAttribute("a",a);
 	modelmap.addAttribute("sum",sum);
@@ -76,6 +79,10 @@ public String check(Model model) {
 	modelmap.addAttribute("fr",fr);
 	modelmap.addAttribute("sum6",sum6);
 	modelmap.addAttribute("dosuu",dosuu);
+	modelmap.addAttribute("h", h);
+	modelmap.addAttribute("sum7",sum7);
+	modelmap.addAttribute("fr1",fr1);
+	modelmap.addAttribute("dosuu1",dosuu1);
 	modelmap.addAttribute("weight",weight);
 	
 	/////飲んだ量の合計
@@ -89,9 +96,10 @@ public String check(Model model) {
 	modelmap.addAttribute("Al4",Al4);
 	modelmap.addAttribute("Al5",Al5);
 	modelmap.addAttribute("Al6",Al6);
+	modelmap.addAttribute("Al7",Al7);
 	
 	/////純アルコール量の合計
-	double gouAl = Al + Al1 + Al2 + Al3 + Al4 + Al5 + Al6;
+	double gouAl = Al + Al1 + Al2 + Al3 + Al4 + Al5 + Al6 + Al7;
 	modelmap.addAttribute("gouAl",String.format("%.1f",gouAl));
 	
 	////アルコール分解までの時間
