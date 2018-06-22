@@ -5,6 +5,7 @@ body {
 	padding: 0px 0px 35px 0px;
 	animation: fadeIn 2s ease 0s 1 normal;
     -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    height:1000px;
 }
 
 @keyframes fadeIn {
@@ -106,7 +107,7 @@ span{
 
 
 
-a{
+/*a{
   font-size:30px;
   position: relative;
   display: inline-block;
@@ -130,7 +131,7 @@ a:hover::after {
   transform-origin: left top;
   transform: scale(1, 4);
 }
-    
+    */
 h2{
 	font-size:30px;
 	color:#ff0000;
@@ -188,6 +189,32 @@ h2{
   font-weight:400;
   /* プロパティは順に name, duration, timing-function です */
   }
+.text1{
+  width: 15%;
+  height: 140px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: #FFF;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 0 4px #FFF inset;
+  background-color: rgba(0,0,0,0.9);
+  text-align:left;
+  font-family: 'Meiryo UI';
+  font-size:25px;
+  font-weight:400;
+  margin-left:800px;
+  text-align:right;
+  line-height:50pt;
+  text-decoration: none;
+  
+}
+a { text-decoration: none;
+	color:white;
+ }
+b{
+	font-weight:400;
+}
 .test1:after {
   
   -webkit-animation: ozPulse 1s infinite ease;
@@ -204,7 +231,14 @@ from { opacity: 1; }
 to { opacity: 0; }
 }
 
+
 h3{
 	font-family: 'Meiryo UI';
 	text-align:left;
 }
+
+.count{
+	font-size:30px;
+}
+
+

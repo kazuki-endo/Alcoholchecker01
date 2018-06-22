@@ -16,7 +16,7 @@
   
  <form method="get" action="result"> 
  <p>体重
-  		<br><input value="0" type="number" min="0" max="150" name="weight" style="width:200px;height:30px;font-size:30px;"/><span>kg</span>
+  		<br><input value="0" type="number" min="30" max="150" name="weight" style="width:200px;height:30px;font-size:30px;"/><span>kg</span>
  
  <table>
   <tr><th>お酒</th><th>容量</th><th>度数</th><th>ドリンク数</th></tr>
@@ -32,8 +32,9 @@
   	<p>メニューにない場合はこちら！
   	<table>
   	<tr><th>容量</th><th>度数</th><th>ドリンク数</th></tr>
-  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="text" min="0" max="9999" name="fr">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="g" />杯</td></tr>
-  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="text" min="0" max="9999" name="fr1">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu1" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="h" />杯</td></tr>
+  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="9999" name="fr" step="50">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="g" />杯</td></tr>
+  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="9999" name="fr1" step="50">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu1" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="h" />杯</td></tr>
+  	<tr><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="9999" name="fr2" step="50">ml</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="99" name="dosuu2" />％</td><td><input value="0" style="width:200px;height:30px;font-size:30px;" type="number" min="0" max="100" name="i" />杯</td></tr>
   	</table>
   		
   		<br><input class="endo" type="submit" value="完了">

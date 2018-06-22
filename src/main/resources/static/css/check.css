@@ -19,6 +19,45 @@ body{
     100% {opacity: 1}
 }
 
+.balloon {
+margin-bottom: 2em;
+position: relative;
+}
+.balloon:before,.balloon:after {
+clear: both;
+content: "";
+display: block;
+}
+.balloon figure {
+width: 60px;
+height: 60px;
+}
+.balloon-image-left {
+float: left;
+margin-right: 20px;
+}
+.balloon figure img {
+width: 100%;
+height: 100%;
+border: 1px solid #aaa;
+border-radius: 50%;
+margin: 0;
+}
+.balloon-image-description {
+padding: 5px 0 0;
+font-size: 10px;
+text-align: center;
+}
+.balloon-text-right,.balloon-text-left {
+position: relative;
+padding: 10px;
+border: 1px solid;
+border-radius: 10px;
+max-width: -webkit-calc(100% - 120px);
+max-width: calc(100% - 120px);
+display: inline-block;
+}
+
 
 h1 {
 	text-align:center;

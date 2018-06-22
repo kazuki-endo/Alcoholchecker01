@@ -72,7 +72,7 @@ function CDT(){
  // var tl = new Date('2018/6/28 00:00:00');
  var tl = new Date(/*[[${time}]]*/ '2018/6/28 00:00:00');
  console.log(/*[[${time}]]*/);
- var timer = new CountdownTimer('CDT',tl,'安全運転でお願いします！');
+ var timer = new CountdownTimer('CDT',tl, '<span class="count">安全運転でお願いします！</span>');
  timer.countDown();
 }
 window.onload=function(){
@@ -80,15 +80,16 @@ window.onload=function(){
 }
 /*]]>*/
 </script>
-<div class="frame frame-red">
-  <div class="frame-title caution">
+
     
-  </div>
   <div class="textboard">
 <h3 class="test1" >＊「算出時間は個人差がおおきく、 あくまでめやすです。」</h3>
 </div>
   
   
+  <div class="text1" ><a href = "./check">▶　Menuに戻る　</a><br><b>いいえ　　　　　</b></div>
+
+
   
   <!--  <h2>
     算出時間は個人差が大きく、あくまで簡易的な目安です。
@@ -96,6 +97,7 @@ window.onload=function(){
 </div>
 
 	<br></br>
-  <a href = "./index" >ＴＯＰに戻る</a><br>
+  <a href = "./index" >ＴＯＰに戻る</a><br></br>
+  
 </body>
 </html>
